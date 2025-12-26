@@ -1,0 +1,163 @@
+# QiyasHash Docker Compose Configuration
+# For development and production deployments
+
+version: '3.8'
+
+services:
+  # Identity Service - Manages user identities and verification
+  identity-service:
+    build:
+      context: ..
+      dockerfile: deploy/docker/identity-service.Dockerfile
+    container_name: qiyashash-identity
+    ports:
+      - "8081:8081"
+    volumes:
+      - identity-data:/data
+    environment:
+      - RUST_LOG=${RUST_LOG:-info}
+      - STORAGE_PATH=/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8081/api/v1/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - qiyashash-net
+
+  # Encryption Service - Message encryption/decryption
+  encryption-service:
+    build:
+      context: ..
+      dockerfile: deploy/docker/encryption-service.Dockerfile
+    container_name: qiyashash-encryption
+    ports:
+      - "8082:8082"
+    volumes:
+      - encryption-data:/data
+    environment:
+      - RUST_LOG=${RUST_LOG:-info}
+      - STORAGE_PATH=/data
+    restart: unless-stopped
+    depends_on:
+      identity-service:
+        condition: service_healthy
+    networks:
+      - qiyashash-net
+
+  # DHT Peer Service - Distributed hash table for message storage
+  dht-peer:
+    build:
+      context: ..
+      dockerfile: deploy/docker/dht-peer-service.Dockerfile
+    container_name: qiyashash-dht
+    ports:
+      - "4001:4001"
+      - "4001:4001/udp"
+    volumes:
+      - dht-data:/data
+    environment:
+      - RUST_LOG=${RUST_LOG:-info}
+      - STORAGE_PATH=/data
+      - LISTEN_ADDR=/ip4/0.0.0.0/tcp/4001
+      - BOOTSTRAP_NODES=${BOOTSTRAP_NODES:-}
+    restart: unless-stopped
+    networks:
+      - qiyashash-net
+
+  # Relay Service - Message relay for offline delivery
+  relay:
+    build:
+      context: ..
+      dockerfile: deploy/docker/relay-service.Dockerfile
+    container_name: qiyashash-relay
+    ports:
+      - "4433:4433"
+    volumes:
+      - relay-data:/data
+      - ./certs:/certs:ro
+    environment:
+      - RUST_LOG=${RUST_LOG:-info}
+      - STORAGE_PATH=/data
+      - TLS_CERT=/certs/relay.crt
+      - TLS_KEY=/certs/relay.key
+    restart: unless-stopped
+    networks:
+      - qiyashash-net
+
+  # Chain State Service - Message ordering
+  chain-state:
+    build:
+      context: ..
+      dockerfile: deploy/docker/chain-state-service.Dockerfile
+    container_name: qiyashash-chain
+    ports:
+      - "8083:8083"
+    volumes:
+      - chain-data:/data
+    environment:
+      - RUST_LOG=${RUST_LOG:-info}
+      - STORAGE_PATH=/data
+    restart: unless-stopped
+    networks:
+      - qiyashash-net
+
+  # Web Client - React SPA
+  web-client:
+    build:
+      context: ../clients/web
+      dockerfile: ../../deploy/docker/web-client.Dockerfile
+    container_name: qiyashash-web
+    ports:
+      - "3000:80"
+    restart: unless-stopped
+    depends_on:
+      - identity-service
+      - encryption-service
+    networks:
+      - qiyashash-net
+
+  # Optional: Tor Proxy for anonymous access
+  tor:
+    image: osminogin/tor-simple:latest
+    container_name: qiyashash-tor
+    ports:
+      - "9050:9050"
+    volumes:
+      - tor-data:/var/lib/tor
+    restart: unless-stopped
+    networks:
+      - qiyashash-net
+    profiles:
+      - anonymity
+
+  # Optional: I2P Router
+  i2p:
+    image: geti2p/i2p:latest
+    container_name: qiyashash-i2p
+    ports:
+      - "7656:7656"
+      - "7657:7657"
+    volumes:
+      - i2p-data:/i2p/.i2p
+    restart: unless-stopped
+    networks:
+      - qiyashash-net
+    profiles:
+      - anonymity
+
+# Networks
+networks:
+  qiyashash-net:
+    driver: bridge
+
+# Volumes
+volumes:
+  identity-data:
+  encryption-data:
+  dht-data:
+  relay-data:
+  chain-data:
+  tor-data:
+  i2p-data:

@@ -1,0 +1,77 @@
+# QiyasHash Kubernetes Namespace and Common Resources
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: qiyashash
+  labels:
+    app.kubernetes.io/name: qiyashash
+    app.kubernetes.io/part-of: qiyashash-stack
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: qiyashash-config
+  namespace: qiyashash
+data:
+  RUST_LOG: "info"
+  
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: qiyashash-secrets
+  namespace: qiyashash
+type: Opaque
+data:
+  # Base64 encoded secrets - replace in production
+  # echo -n "your-secret" | base64
+  jwt-secret: Y2hhbmdlLW1lLWluLXByb2R1Y3Rpb24=
+
+---
+# Network Policy - allow internal traffic only
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: qiyashash-network-policy
+  namespace: qiyashash
+spec:
+  podSelector: {}
+  policyTypes:
+    - Ingress
+    - Egress
+  ingress:
+    - from:
+        - namespaceSelector:
+            matchLabels:
+              app.kubernetes.io/part-of: qiyashash-stack
+        - podSelector: {}
+  egress:
+    - to:
+        - namespaceSelector:
+            matchLabels:
+              app.kubernetes.io/part-of: qiyashash-stack
+        - podSelector: {}
+    - to: # Allow DNS
+        - namespaceSelector: {}
+      ports:
+        - protocol: UDP
+          port: 53
+    - to: # Allow external HTTPS
+        - ipBlock:
+            cidr: 0.0.0.0/0
+      ports:
+        - protocol: TCP
+          port: 443
+
+---
+# Storage Class for persistent data
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: qiyashash-storage
+  namespace: qiyashash
+provisioner: kubernetes.io/no-provisioner
+volumeBindingMode: WaitForFirstConsumer
+reclaimPolicy: Retain

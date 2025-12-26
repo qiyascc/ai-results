@@ -1,0 +1,50 @@
+// QiyasHash Mobile UniFFI Interface Definition
+
+namespace qiyashash_mobile {
+    // Utility functions
+    string generate_session_key();
+};
+
+[Error]
+enum MobileError {
+    "InitError",
+    "CryptoError",
+    "StorageError",
+    "NetworkError",
+    "NotInitialized",
+    "InvalidInput",
+};
+
+interface QiyasHashClient {
+    constructor();
+    
+    [Async, Throws=MobileError]
+    void initialize(string storage_path);
+    
+    [Async]
+    boolean is_initialized();
+    
+    [Async, Throws=MobileError]
+    string create_identity(string display_name);
+    
+    [Async, Throws=MobileError]
+    string? load_identity();
+    
+    [Async, Throws=MobileError]
+    string? get_identity_id();
+    
+    [Async, Throws=MobileError]
+    string get_public_key();
+    
+    [Async, Throws=MobileError]
+    string encrypt_message(string recipient_public_key, string plaintext);
+    
+    [Async, Throws=MobileError]
+    string decrypt_message(string sender_public_key, string ciphertext);
+    
+    [Throws=MobileError]
+    string generate_session_key();
+    
+    [Async, Throws=MobileError]
+    void wipe_data();
+};

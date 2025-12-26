@@ -1,0 +1,51 @@
+[package]
+name = "qiyashash-dht"
+description = "Distributed Hash Table for QiyasHash message distribution"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+# Internal
+qiyashash-core = { path = "../qiyashash-core" }
+qiyashash-crypto = { path = "../qiyashash-crypto" }
+
+# libp2p for DHT
+libp2p = { workspace = true }
+
+# Async
+tokio = { workspace = true }
+tokio-stream = { workspace = true }
+async-trait = { workspace = true }
+futures = { workspace = true }
+
+# Serialization
+serde = { workspace = true }
+serde_json = { workspace = true }
+bincode = { workspace = true }
+
+# Error handling
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+
+# Logging
+tracing = { workspace = true }
+
+# Storage
+sled = { workspace = true }
+
+# Misc
+hex = { workspace = true }
+base64 = { workspace = true }
+parking_lot = { workspace = true }
+dashmap = { workspace = true }
+bytes = { workspace = true }
+chrono = { workspace = true }
+uuid = { workspace = true }
+reed-solomon-erasure = { workspace = true }
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["test-util", "macros"] }
+test-log = { workspace = true }
+tracing-subscriber = { workspace = true }

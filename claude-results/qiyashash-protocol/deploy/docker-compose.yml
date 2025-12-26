@@ -1,0 +1,138 @@
+version: '3.8'
+
+services:
+  # Identity Service
+  identity-service:
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile.identity
+    ports:
+      - "8080:8080"
+    volumes:
+      - identity-data:/data
+    environment:
+      - RUST_LOG=info
+      - STORAGE_PATH=/data/identity
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/api/v1/identity/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
+
+  # Encryption Service
+  encryption-service:
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile.encryption
+    ports:
+      - "8081:8080"
+    volumes:
+      - encryption-data:/data
+    environment:
+      - RUST_LOG=info
+      - STORAGE_PATH=/data/encryption
+    depends_on:
+      - identity-service
+    restart: unless-stopped
+
+  # DHT Peer Service
+  dht-peer-service:
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile.dht
+    ports:
+      - "8082:8080"
+      - "4001:4001"  # libp2p
+      - "4001:4001/udp"  # QUIC
+    volumes:
+      - dht-data:/data
+    environment:
+      - RUST_LOG=info
+      - STORAGE_PATH=/data/dht
+      - BOOTSTRAP_NODES=
+    restart: unless-stopped
+
+  # Relay Coordination Service
+  relay-service:
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile.relay
+    ports:
+      - "8083:8080"
+    volumes:
+      - relay-data:/data
+    environment:
+      - RUST_LOG=info
+    depends_on:
+      - dht-peer-service
+    restart: unless-stopped
+
+  # Chain State Service
+  chain-service:
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile.chain
+    ports:
+      - "8084:8080"
+    volumes:
+      - chain-data:/data
+    environment:
+      - RUST_LOG=info
+      - STORAGE_PATH=/data/chain
+    restart: unless-stopped
+
+  # Metadata Nullification Service
+  metadata-service:
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile.metadata
+    ports:
+      - "8085:8080"
+    environment:
+      - RUST_LOG=info
+      - DUMMY_TRAFFIC_RATE=1.0
+    restart: unless-stopped
+
+  # Prometheus for monitoring
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./deploy/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus-data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+    restart: unless-stopped
+
+  # Grafana for dashboards
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana-data:/var/lib/grafana
+      - ./deploy/grafana/dashboards:/etc/grafana/provisioning/dashboards
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    depends_on:
+      - prometheus
+    restart: unless-stopped
+
+volumes:
+  identity-data:
+  encryption-data:
+  dht-data:
+  relay-data:
+  chain-data:
+  prometheus-data:
+  grafana-data:
+
+networks:
+  default:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.28.0.0/16

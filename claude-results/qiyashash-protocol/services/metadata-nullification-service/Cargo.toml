@@ -1,0 +1,52 @@
+[package]
+name = "metadata-nullification-service"
+description = "Metadata protection and nullification service for QiyasHash"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "metadata-nullification-service"
+path = "src/main.rs"
+
+[dependencies]
+# Internal
+qiyashash-core = { path = "../../crates/qiyashash-core" }
+qiyashash-crypto = { path = "../../crates/qiyashash-crypto" }
+qiyashash-anonymity = { path = "../../crates/qiyashash-anonymity" }
+
+# Web framework
+actix-web = { workspace = true }
+actix-rt = { workspace = true }
+actix-cors = { workspace = true }
+
+# Async
+tokio = { workspace = true }
+async-trait = { workspace = true }
+
+# Serialization
+serde = { workspace = true }
+serde_json = { workspace = true }
+
+# Error handling
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+
+# Logging
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+
+# Crypto
+rand = { workspace = true }
+
+# Misc
+hex = { workspace = true }
+base64 = { workspace = true }
+uuid = { workspace = true }
+chrono = { workspace = true }
+clap = { workspace = true }
+bytes = { workspace = true }
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["test-util", "macros"] }

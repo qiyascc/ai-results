@@ -1,0 +1,46 @@
+[package]
+name = "qiyashash-crypto"
+description = "QiyasHash cryptographic primitives - secure E2E encryption"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+# Core crypto
+x25519-dalek = { workspace = true }
+ed25519-dalek = { workspace = true }
+curve25519-dalek = { workspace = true }
+sha2 = { workspace = true }
+sha3 = { workspace = true }
+aes-gcm = { workspace = true }
+chacha20poly1305 = { workspace = true }
+hkdf = { workspace = true }
+hmac = { workspace = true }
+rand = { workspace = true }
+rand_core = { workspace = true }
+zeroize = { workspace = true }
+
+# Serialization
+serde = { workspace = true }
+bincode = { workspace = true }
+base64 = { workspace = true }
+hex = { workspace = true }
+
+# Error handling
+thiserror = { workspace = true }
+
+# Time
+chrono = { workspace = true }
+
+# Misc
+bytes = { workspace = true }
+
+[dev-dependencies]
+criterion = { workspace = true }
+proptest = { workspace = true }
+test-log = { workspace = true }
+
+[[bench]]
+name = "crypto_bench"
+harness = false

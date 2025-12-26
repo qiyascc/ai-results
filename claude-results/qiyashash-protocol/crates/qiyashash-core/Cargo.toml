@@ -1,0 +1,38 @@
+[package]
+name = "qiyashash-core"
+description = "Core types and utilities for QiyasHash E2E messaging protocol"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+# Internal
+qiyashash-crypto = { path = "../qiyashash-crypto" }
+
+# Serialization
+serde = { workspace = true }
+serde_json = { workspace = true }
+bincode = { workspace = true }
+
+# Async
+tokio = { workspace = true }
+async-trait = { workspace = true }
+
+# Error handling
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+
+# Time
+chrono = { workspace = true }
+
+# IDs
+uuid = { workspace = true }
+base64 = { workspace = true }
+hex = { workspace = true }
+
+# Logging
+tracing = { workspace = true }
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["test-util"] }

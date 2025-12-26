@@ -1,0 +1,42 @@
+[package]
+name = "qiyashash-protocol"
+description = "QiyasHash messaging protocol implementation"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+# Internal
+qiyashash-core = { path = "../qiyashash-core" }
+qiyashash-crypto = { path = "../qiyashash-crypto" }
+
+# Async
+tokio = { workspace = true }
+async-trait = { workspace = true }
+futures = { workspace = true }
+
+# Serialization
+serde = { workspace = true }
+serde_json = { workspace = true }
+bincode = { workspace = true }
+
+# Error handling
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+
+# Logging
+tracing = { workspace = true }
+
+# Time
+chrono = { workspace = true }
+
+# Misc
+uuid = { workspace = true }
+hex = { workspace = true }
+base64 = { workspace = true }
+parking_lot = { workspace = true }
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["test-util", "macros"] }
+test-log = { workspace = true }

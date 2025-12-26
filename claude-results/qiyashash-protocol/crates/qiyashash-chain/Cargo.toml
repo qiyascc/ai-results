@@ -1,0 +1,41 @@
+[package]
+name = "qiyashash-chain"
+description = "Chain state management for message ordering in QiyasHash"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+# Internal
+qiyashash-core = { path = "../qiyashash-core" }
+qiyashash-crypto = { path = "../qiyashash-crypto" }
+
+# Async
+tokio = { workspace = true }
+async-trait = { workspace = true }
+
+# Serialization
+serde = { workspace = true }
+serde_json = { workspace = true }
+bincode = { workspace = true }
+
+# Crypto
+sha2 = { workspace = true }
+
+# Error handling
+thiserror = { workspace = true }
+
+# Logging
+tracing = { workspace = true }
+
+# Storage
+sled = { workspace = true }
+
+# Misc
+hex = { workspace = true }
+parking_lot = { workspace = true }
+chrono = { workspace = true }
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["test-util", "macros"] }

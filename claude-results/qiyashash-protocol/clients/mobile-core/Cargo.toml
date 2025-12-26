@@ -1,0 +1,49 @@
+[package]
+name = "qiyashash-mobile-core"
+description = "QiyasHash Mobile Core Library for iOS/Android via UniFFI"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[lib]
+name = "qiyashash_mobile"
+crate-type = ["cdylib", "staticlib"]
+
+[dependencies]
+# Internal
+qiyashash-core = { path = "../../crates/qiyashash-core" }
+qiyashash-crypto = { path = "../../crates/qiyashash-crypto" }
+qiyashash-protocol = { path = "../../crates/qiyashash-protocol" }
+
+# Async
+tokio = { workspace = true }
+
+# Serialization
+serde = { workspace = true }
+serde_json = { workspace = true }
+
+# Error handling
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+
+# FFI
+uniffi = { version = "0.25", features = ["cli"] }
+
+# Logging
+tracing = { workspace = true }
+
+# Storage
+sled = { workspace = true }
+
+# Misc
+hex = { workspace = true }
+base64 = { workspace = true }
+chrono = { workspace = true }
+uuid = { workspace = true }
+
+[build-dependencies]
+uniffi = { version = "0.25", features = ["build"] }
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["test-util", "macros"] }
