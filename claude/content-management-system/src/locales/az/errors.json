@@ -1,0 +1,51 @@
+{
+  "generic": "Xəta baş verdi",
+  "notFound": "Səhifə tapılmadı",
+  "unauthorized": "Giriş tələb olunur",
+  "forbidden": "Bu əməliyyat üçün icazəniz yoxdur",
+  "serverError": "Server xətası",
+  "networkError": "Şəbəkə xətası",
+  "validation": "Məlumatları yoxlayın",
+  "timeout": "Sorğu müddəti bitdi",
+  "badRequest": "Yanlış sorğu",
+  "conflict": "Məlumat konflikti",
+  "tooManyRequests": "Çox sayda sorğu göndərildi",
+  "serviceUnavailable": "Xidmət əlçatan deyil",
+  "pages": {
+    "404": {
+      "title": "Səhifə tapılmadı",
+      "description": "Axtardığınız səhifə mövcud deyil və ya silinib.",
+      "backHome": "Ana səhifəyə qayıt",
+      "goBack": "Geri qayıt"
+    },
+    "500": {
+      "title": "Server xətası",
+      "description": "Bir xəta baş verdi. Zəhmət olmasa daha sonra yenidən cəhd edin.",
+      "retry": "Yenidən cəhd et",
+      "backHome": "Ana səhifəyə qayıt"
+    },
+    "403": {
+      "title": "Giriş qadağandır",
+      "description": "Bu səhifəyə giriş icazəniz yoxdur.",
+      "backHome": "Ana səhifəyə qayıt",
+      "login": "Daxil olun"
+    },
+    "401": {
+      "title": "Giriş tələb olunur",
+      "description": "Bu səhifəyə giriş üçün daxil olmalısınız.",
+      "login": "Daxil ol"
+    },
+    "maintenance": {
+      "title": "Texniki xidmət",
+      "description": "Sayt hal-hazırda texniki xidmət işləri aparılır. Tezliklə geri dönəcəyik."
+    }
+  },
+  "form": {
+    "required": "Bu sahə məcburidir",
+    "email": "Düzgün e-poçt daxil edin",
+    "minLength": "Minimum {min} simvol olmalıdır",
+    "maxLength": "Maksimum {max} simvol ola bilər",
+    "pattern": "Format düzgün deyil",
+    "unique": "Bu dəyər artıq mövcuddur"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "title": "Panel",
+  "welcome": "Hoş geldiniz!",
+  "overview": "Genel Bakış",
+  "stats": {
+    "totalViews": "Toplam Görüntülenme",
+    "totalPosts": "Yazılar",
+    "totalComments": "Yorumlar",
+    "newUsers": "Yeni Kullanıcılar"
+  },
+  "recentActivity": "Son Etkinlikler",
+  "quickActions": {
+    "title": "Hızlı İşlemler",
+    "newPost": "Yeni Yazı",
+    "uploadMedia": "Medya Yükle",
+    "viewSite": "Siteyi Gör",
+    "viewAdmin": "Yönetim Paneli"
+  },
+  "profile": {
+    "title": "Profil",
+    "edit": "Profili Düzenle",
+    "changePassword": "Şifre Değiştir",
+    "preferences": "Tercihler",
+    "avatar": "Avatar",
+    "name": "Ad",
+    "email": "E-posta",
+    "bio": "Hakkında",
+    "website": "Web Sitesi",
+    "location": "Konum",
+    "save": "Kaydet",
+    "updated": "Profil güncellendi"
+  },
+  "chat": {
+    "title": "AI Sohbet",
+    "placeholder": "Mesaj yazın...",
+    "send": "Gönder",
+    "newChat": "Yeni Sohbet",
+    "history": "Sohbet Geçmişi",
+    "deleteChat": "Sohbeti Sil",
+    "clearHistory": "Geçmişi Temizle",
+    "typing": "Yazıyor...",
+    "noMessages": "Mesaj yok",
+    "startConversation": "Sohbete başlayın"
+  },
+  "notifications": {
+    "title": "Bildirimler",
+    "markAllRead": "Tümünü okundu işaretle",
+    "noNotifications": "Bildirim yok",
+    "viewAll": "Tümünü gör"
+  },
+  "sidebar": {
+    "dashboard": "Panel",
+    "profile": "Profil",
+    "chat": "AI Sohbet",
+    "settings": "Ayarlar"
+  }
+}

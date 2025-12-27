@@ -1,0 +1,222 @@
+{
+  "title": "Admin Panel",
+  "welcome": "Welcome, {name}",
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "users": "Users",
+    "roles": "Roles",
+    "posts": "Posts",
+    "categories": "Categories",
+    "tags": "Tags",
+    "media": "Media",
+    "contacts": "Contact Forms",
+    "languages": "Languages",
+    "translations": "Translations",
+    "settings": "Settings",
+    "analytics": "Analytics",
+    "audit": "Audit Log"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "overview": "Overview",
+    "stats": {
+      "users": "Users",
+      "posts": "Posts",
+      "categories": "Categories",
+      "media": "Media Files",
+      "views": "Views",
+      "contacts": "Contacts"
+    },
+    "recentPosts": "Recent Posts",
+    "recentUsers": "Recent Registrations",
+    "recentContacts": "Recent Contacts"
+  },
+  "users": {
+    "title": "Users",
+    "create": "New User",
+    "edit": "Edit User",
+    "delete": "Delete User",
+    "fields": {
+      "name": "Name",
+      "email": "Email",
+      "role": "Role",
+      "status": "Status",
+      "createdAt": "Created at",
+      "lastLogin": "Last login",
+      "avatar": "Avatar"
+    },
+    "actions": {
+      "activate": "Activate",
+      "deactivate": "Deactivate",
+      "resetPassword": "Reset Password"
+    }
+  },
+  "roles": {
+    "title": "Roles",
+    "create": "New Role",
+    "edit": "Edit Role",
+    "delete": "Delete Role",
+    "fields": {
+      "name": "Role name",
+      "slug": "Slug",
+      "description": "Description",
+      "permissions": "Permissions",
+      "userCount": "User count"
+    },
+    "permissions": {
+      "title": "Permissions",
+      "selectAll": "Select all",
+      "groups": {
+        "users": "Users",
+        "roles": "Roles",
+        "posts": "Posts",
+        "categories": "Categories",
+        "tags": "Tags",
+        "media": "Media",
+        "contacts": "Contacts",
+        "settings": "Settings"
+      }
+    }
+  },
+  "posts": {
+    "title": "Posts",
+    "create": "New Post",
+    "edit": "Edit Post",
+    "delete": "Delete Post",
+    "fields": {
+      "title": "Title",
+      "slug": "URL Slug",
+      "excerpt": "Excerpt",
+      "content": "Content",
+      "coverImage": "Cover Image",
+      "category": "Category",
+      "tags": "Tags",
+      "status": "Status",
+      "author": "Author",
+      "publishedAt": "Published at",
+      "viewCount": "Views",
+      "featured": "Featured",
+      "metaTitle": "Meta Title",
+      "metaDescription": "Meta Description"
+    },
+    "status": {
+      "draft": "Draft",
+      "pending": "Pending Review",
+      "published": "Published",
+      "archived": "Archived"
+    },
+    "actions": {
+      "publish": "Publish",
+      "unpublish": "Unpublish",
+      "duplicate": "Duplicate"
+    }
+  },
+  "categories": {
+    "title": "Categories",
+    "create": "New Category",
+    "edit": "Edit Category",
+    "delete": "Delete Category",
+    "fields": {
+      "name": "Name",
+      "slug": "Slug",
+      "description": "Description",
+      "parent": "Parent Category",
+      "postCount": "Post count"
+    }
+  },
+  "tags": {
+    "title": "Tags",
+    "create": "New Tag",
+    "edit": "Edit Tag",
+    "delete": "Delete Tag",
+    "fields": {
+      "name": "Name",
+      "slug": "Slug",
+      "postCount": "Post count"
+    }
+  },
+  "media": {
+    "title": "Media Library",
+    "upload": "Upload File",
+    "delete": "Delete",
+    "fields": {
+      "filename": "Filename",
+      "type": "Type",
+      "size": "Size",
+      "uploadedAt": "Uploaded at",
+      "uploadedBy": "Uploaded by"
+    },
+    "filters": {
+      "all": "All",
+      "images": "Images",
+      "videos": "Videos",
+      "documents": "Documents"
+    },
+    "dropzone": {
+      "title": "Drop files here",
+      "or": "or",
+      "browse": "Browse from computer"
+    }
+  },
+  "contacts": {
+    "title": "Contact Forms",
+    "view": "View",
+    "delete": "Delete",
+    "fields": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "status": "Status",
+      "createdAt": "Date"
+    },
+    "status": {
+      "new": "New",
+      "read": "Read",
+      "replied": "Replied",
+      "archived": "Archived"
+    }
+  },
+  "languages": {
+    "title": "Languages",
+    "create": "New Language",
+    "edit": "Edit Language",
+    "fields": {
+      "code": "Language code",
+      "name": "Name",
+      "nativeName": "Native name",
+      "isDefault": "Default language",
+      "isActive": "Active"
+    }
+  },
+  "translations": {
+    "title": "Translations",
+    "import": "Import",
+    "export": "Export",
+    "fields": {
+      "namespace": "Namespace",
+      "key": "Key",
+      "value": "Value"
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "save": "Save",
+    "tabs": {
+      "general": "General",
+      "appearance": "Appearance",
+      "email": "Email",
+      "security": "Security",
+      "seo": "SEO",
+      "social": "Social"
+    },
+    "general": {
+      "siteName": "Site name",
+      "siteDescription": "Site description",
+      "siteUrl": "Site URL",
+      "timezone": "Timezone",
+      "dateFormat": "Date format",
+      "postsPerPage": "Posts per page"
+    }
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "title": "Admin Paneli",
+  "welcome": "Xoş gəldiniz, {name}",
+  "sidebar": {
+    "dashboard": "İdarə paneli",
+    "users": "İstifadəçilər",
+    "roles": "Rollar",
+    "posts": "Yazılar",
+    "categories": "Kateqoriyalar",
+    "tags": "Etiketlər",
+    "media": "Media",
+    "contacts": "Əlaqə formları",
+    "languages": "Dillər",
+    "translations": "Tərcümələr",
+    "settings": "Tənzimləmələr",
+    "analytics": "Analitika",
+    "audit": "Audit"
+  },
+  "dashboard": {
+    "title": "İdarə paneli",
+    "overview": "Ümumi baxış",
+    "stats": {
+      "users": "İstifadəçilər",
+      "posts": "Yazılar",
+      "categories": "Kateqoriyalar",
+      "media": "Media faylları",
+      "views": "Baxışlar",
+      "contacts": "Müraciətlər"
+    },
+    "recentPosts": "Son yazılar",
+    "recentUsers": "Son qeydiyyatlar",
+    "recentContacts": "Son müraciətlər"
+  },
+  "users": {
+    "title": "İstifadəçilər",
+    "create": "Yeni istifadəçi",
+    "edit": "İstifadəçini redaktə et",
+    "delete": "İstifadəçini sil",
+    "fields": {
+      "name": "Ad",
+      "email": "E-poçt",
+      "role": "Rol",
+      "status": "Status",
+      "createdAt": "Qeydiyyat tarixi",
+      "lastLogin": "Son giriş",
+      "avatar": "Avatar"
+    },
+    "actions": {
+      "activate": "Aktiv et",
+      "deactivate": "Deaktiv et",
+      "resetPassword": "Şifrəni sıfırla"
+    }
+  },
+  "roles": {
+    "title": "Rollar",
+    "create": "Yeni rol",
+    "edit": "Rolu redaktə et",
+    "delete": "Rolu sil",
+    "fields": {
+      "name": "Rol adı",
+      "slug": "Slug",
+      "description": "Təsvir",
+      "permissions": "İcazələr",
+      "userCount": "İstifadəçi sayı"
+    },
+    "permissions": {
+      "title": "İcazələr",
+      "selectAll": "Hamısını seç",
+      "groups": {
+        "users": "İstifadəçilər",
+        "roles": "Rollar",
+        "posts": "Yazılar",
+        "categories": "Kateqoriyalar",
+        "tags": "Etiketlər",
+        "media": "Media",
+        "contacts": "Əlaqə",
+        "settings": "Tənzimləmələr"
+      }
+    }
+  },
+  "posts": {
+    "title": "Yazılar",
+    "create": "Yeni yazı",
+    "edit": "Yazını redaktə et",
+    "delete": "Yazını sil",
+    "fields": {
+      "title": "Başlıq",
+      "slug": "URL Slug",
+      "excerpt": "Qısa məzmun",
+      "content": "Məzmun",
+      "coverImage": "Örtük şəkli",
+      "category": "Kateqoriya",
+      "tags": "Etiketlər",
+      "status": "Status",
+      "author": "Müəllif",
+      "publishedAt": "Dərc tarixi",
+      "viewCount": "Baxış sayı",
+      "featured": "Seçilmiş",
+      "metaTitle": "Meta başlıq",
+      "metaDescription": "Meta təsvir"
+    },
+    "status": {
+      "draft": "Qaralama",
+      "pending": "Gözləyir",
+      "published": "Dərc olunub",
+      "archived": "Arxivlənib"
+    },
+    "actions": {
+      "publish": "Dərc et",
+      "unpublish": "Geri çək",
+      "duplicate": "Kopyala"
+    }
+  },
+  "categories": {
+    "title": "Kateqoriyalar",
+    "create": "Yeni kateqoriya",
+    "edit": "Kateqoriyanı redaktə et",
+    "delete": "Kateqoriyanı sil",
+    "fields": {
+      "name": "Ad",
+      "slug": "Slug",
+      "description": "Təsvir",
+      "parent": "Ana kateqoriya",
+      "postCount": "Yazı sayı"
+    }
+  },
+  "tags": {
+    "title": "Etiketlər",
+    "create": "Yeni etiket",
+    "edit": "Etiketi redaktə et",
+    "delete": "Etiketi sil",
+    "fields": {
+      "name": "Ad",
+      "slug": "Slug",
+      "postCount": "Yazı sayı"
+    }
+  },
+  "media": {
+    "title": "Media kitabxanası",
+    "upload": "Fayl yüklə",
+    "delete": "Sil",
+    "fields": {
+      "filename": "Fayl adı",
+      "type": "Növ",
+      "size": "Ölçü",
+      "uploadedAt": "Yüklənmə tarixi",
+      "uploadedBy": "Yükləyən"
+    },
+    "filters": {
+      "all": "Hamısı",
+      "images": "Şəkillər",
+      "videos": "Videolar",
+      "documents": "Sənədlər"
+    },
+    "dropzone": {
+      "title": "Faylları buraya atın",
+      "or": "və ya",
+      "browse": "Kompüterdən seçin"
+    }
+  },
+  "contacts": {
+    "title": "Əlaqə formları",
+    "view": "Bax",
+    "delete": "Sil",
+    "fields": {
+      "name": "Ad",
+      "email": "E-poçt",
+      "subject": "Mövzu",
+      "message": "Mesaj",
+      "status": "Status",
+      "createdAt": "Tarix"
+    },
+    "status": {
+      "new": "Yeni",
+      "read": "Oxunub",
+      "replied": "Cavablanıb",
+      "archived": "Arxivlənib"
+    }
+  },
+  "languages": {
+    "title": "Dillər",
+    "create": "Yeni dil",
+    "edit": "Dili redaktə et",
+    "fields": {
+      "code": "Dil kodu",
+      "name": "Ad",
+      "nativeName": "Yerli ad",
+      "isDefault": "Əsas dil",
+      "isActive": "Aktiv"
+    }
+  },
+  "translations": {
+    "title": "Tərcümələr",
+    "import": "İdxal et",
+    "export": "İxrac et",
+    "fields": {
+      "namespace": "Ad sahəsi",
+      "key": "Açar",
+      "value": "Dəyər"
+    }
+  },
+  "settings": {
+    "title": "Tənzimləmələr",
+    "save": "Yadda saxla",
+    "tabs": {
+      "general": "Ümumi",
+      "appearance": "Görünüş",
+      "email": "E-poçt",
+      "security": "Təhlükəsizlik",
+      "seo": "SEO",
+      "social": "Sosial"
+    },
+    "general": {
+      "siteName": "Sayt adı",
+      "siteDescription": "Sayt təsviri",
+      "siteUrl": "Sayt URL",
+      "timezone": "Saat qurşağı",
+      "dateFormat": "Tarix formatı",
+      "postsPerPage": "Səhifə başına yazı"
+    }
+  }
+}

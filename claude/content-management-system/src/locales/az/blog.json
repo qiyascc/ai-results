@@ -1,0 +1,72 @@
+{
+  "title": "Bloq",
+  "latestPosts": "Son yazılar",
+  "featuredPosts": "Seçilmiş yazılar",
+  "allPosts": "Bütün yazılar",
+  "categories": "Kateqoriyalar",
+  "tags": "Etiketlər",
+  "archives": "Arxiv",
+  "search": {
+    "placeholder": "Yazı axtar...",
+    "noResults": "Nəticə tapılmadı",
+    "results": "{count} nəticə tapıldı",
+    "searching": "Axtarılır..."
+  },
+  "post": {
+    "by": "Müəllif:",
+    "publishedOn": "Dərc tarixi:",
+    "updatedOn": "Yenilənmə tarixi:",
+    "readMore": "Davamını oxu",
+    "readTime": "{minutes} dəq oxuma",
+    "views": "{count} baxış",
+    "share": "Paylaş",
+    "shareOn": "{platform}-da paylaş",
+    "related": "Oxşar yazılar",
+    "copyLink": "Linki kopyala",
+    "linkCopied": "Link kopyalandı!",
+    "notFound": "Yazı tapılmadı"
+  },
+  "comments": {
+    "title": "Şərhlər",
+    "count": "{count} şərh",
+    "writeComment": "Şərh yazın",
+    "placeholder": "Şərhinizi yazın...",
+    "submit": "Göndər",
+    "noComments": "Hələ şərh yoxdur",
+    "beFirst": "İlk şərh yazan siz olun!",
+    "reply": "Cavabla",
+    "delete": "Sil",
+    "edit": "Redaktə et",
+    "edited": "Redaktə olunub",
+    "loadMore": "Daha çox yüklə",
+    "loginToComment": "Şərh yazmaq üçün daxil olun"
+  },
+  "sidebar": {
+    "about": "Haqqımızda",
+    "recentPosts": "Son yazılar",
+    "popularPosts": "Populyar yazılar",
+    "popularTags": "Populyar etiketlər",
+    "newsletter": {
+      "title": "Xəbər bülteni",
+      "description": "Yeniliklərdən xəbərdar olmaq üçün abunə olun",
+      "placeholder": "E-poçtunuz",
+      "subscribe": "Abunə ol",
+      "success": "Uğurla abunə oldunuz!",
+      "error": "Xəta baş verdi"
+    }
+  },
+  "filters": {
+    "all": "Hamısı",
+    "sortBy": "Sıralama",
+    "newest": "Ən yeni",
+    "oldest": "Ən köhnə",
+    "popular": "Populyar",
+    "category": "Kateqoriya",
+    "tag": "Etiket"
+  },
+  "pagination": {
+    "previous": "Əvvəlki",
+    "next": "Növbəti",
+    "page": "Səhifə {current} / {total}"
+  }
+}

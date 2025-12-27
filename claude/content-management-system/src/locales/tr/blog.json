@@ -1,0 +1,72 @@
+{
+  "title": "Blog",
+  "latestPosts": "Son Yazılar",
+  "featuredPosts": "Öne Çıkan Yazılar",
+  "allPosts": "Tüm Yazılar",
+  "categories": "Kategoriler",
+  "tags": "Etiketler",
+  "archives": "Arşiv",
+  "search": {
+    "placeholder": "Yazı ara...",
+    "noResults": "Sonuç bulunamadı",
+    "results": "{count} sonuç bulundu",
+    "searching": "Aranıyor..."
+  },
+  "post": {
+    "by": "Yazar:",
+    "publishedOn": "Yayın tarihi:",
+    "updatedOn": "Güncelleme tarihi:",
+    "readMore": "Devamını oku",
+    "readTime": "{minutes} dk okuma",
+    "views": "{count} görüntülenme",
+    "share": "Paylaş",
+    "shareOn": "{platform} üzerinde paylaş",
+    "related": "İlgili Yazılar",
+    "copyLink": "Linki kopyala",
+    "linkCopied": "Link kopyalandı!",
+    "notFound": "Yazı bulunamadı"
+  },
+  "comments": {
+    "title": "Yorumlar",
+    "count": "{count} yorum",
+    "writeComment": "Yorum yaz",
+    "placeholder": "Yorumunuzu yazın...",
+    "submit": "Gönder",
+    "noComments": "Henüz yorum yok",
+    "beFirst": "İlk yorumu siz yapın!",
+    "reply": "Yanıtla",
+    "delete": "Sil",
+    "edit": "Düzenle",
+    "edited": "Düzenlendi",
+    "loadMore": "Daha fazla yükle",
+    "loginToComment": "Yorum yapmak için giriş yapın"
+  },
+  "sidebar": {
+    "about": "Hakkımızda",
+    "recentPosts": "Son Yazılar",
+    "popularPosts": "Popüler Yazılar",
+    "popularTags": "Popüler Etiketler",
+    "newsletter": {
+      "title": "Bülten",
+      "description": "Yeniliklerden haberdar olmak için abone olun",
+      "placeholder": "E-postanız",
+      "subscribe": "Abone Ol",
+      "success": "Başarıyla abone oldunuz!",
+      "error": "Bir hata oluştu"
+    }
+  },
+  "filters": {
+    "all": "Tümü",
+    "sortBy": "Sırala",
+    "newest": "En Yeni",
+    "oldest": "En Eski",
+    "popular": "Popüler",
+    "category": "Kategori",
+    "tag": "Etiket"
+  },
+  "pagination": {
+    "previous": "Önceki",
+    "next": "Sonraki",
+    "page": "Sayfa {current} / {total}"
+  }
+}

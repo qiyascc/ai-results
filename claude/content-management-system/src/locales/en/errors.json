@@ -1,0 +1,51 @@
+{
+  "generic": "An error occurred",
+  "notFound": "Page not found",
+  "unauthorized": "Login required",
+  "forbidden": "You do not have permission",
+  "serverError": "Server error",
+  "networkError": "Network error",
+  "validation": "Please check your input",
+  "timeout": "Request timed out",
+  "badRequest": "Bad request",
+  "conflict": "Data conflict",
+  "tooManyRequests": "Too many requests",
+  "serviceUnavailable": "Service unavailable",
+  "pages": {
+    "404": {
+      "title": "Page Not Found",
+      "description": "The page you are looking for does not exist or has been removed.",
+      "backHome": "Back to Home",
+      "goBack": "Go Back"
+    },
+    "500": {
+      "title": "Server Error",
+      "description": "Something went wrong. Please try again later.",
+      "retry": "Try Again",
+      "backHome": "Back to Home"
+    },
+    "403": {
+      "title": "Access Denied",
+      "description": "You do not have permission to access this page.",
+      "backHome": "Back to Home",
+      "login": "Sign In"
+    },
+    "401": {
+      "title": "Login Required",
+      "description": "You need to sign in to access this page.",
+      "login": "Sign In"
+    },
+    "maintenance": {
+      "title": "Maintenance",
+      "description": "The site is currently undergoing maintenance. We will be back soon."
+    }
+  },
+  "form": {
+    "required": "This field is required",
+    "email": "Please enter a valid email",
+    "minLength": "Must be at least {min} characters",
+    "maxLength": "Must be at most {max} characters",
+    "pattern": "Invalid format",
+    "unique": "This value already exists"
+  }
+}

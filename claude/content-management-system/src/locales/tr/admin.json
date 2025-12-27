@@ -1,0 +1,222 @@
+{
+  "title": "Yönetim Paneli",
+  "welcome": "Hoş geldiniz, {name}",
+  "sidebar": {
+    "dashboard": "Panel",
+    "users": "Kullanıcılar",
+    "roles": "Roller",
+    "posts": "Yazılar",
+    "categories": "Kategoriler",
+    "tags": "Etiketler",
+    "media": "Medya",
+    "contacts": "İletişim Formları",
+    "languages": "Diller",
+    "translations": "Çeviriler",
+    "settings": "Ayarlar",
+    "analytics": "Analitik",
+    "audit": "Denetim"
+  },
+  "dashboard": {
+    "title": "Panel",
+    "overview": "Genel Bakış",
+    "stats": {
+      "users": "Kullanıcılar",
+      "posts": "Yazılar",
+      "categories": "Kategoriler",
+      "media": "Medya Dosyaları",
+      "views": "Görüntülenme",
+      "contacts": "İletişimler"
+    },
+    "recentPosts": "Son Yazılar",
+    "recentUsers": "Son Kayıtlar",
+    "recentContacts": "Son İletişimler"
+  },
+  "users": {
+    "title": "Kullanıcılar",
+    "create": "Yeni Kullanıcı",
+    "edit": "Kullanıcıyı Düzenle",
+    "delete": "Kullanıcıyı Sil",
+    "fields": {
+      "name": "Ad",
+      "email": "E-posta",
+      "role": "Rol",
+      "status": "Durum",
+      "createdAt": "Kayıt Tarihi",
+      "lastLogin": "Son Giriş",
+      "avatar": "Avatar"
+    },
+    "actions": {
+      "activate": "Aktifleştir",
+      "deactivate": "Deaktifleştir",
+      "resetPassword": "Şifre Sıfırla"
+    }
+  },
+  "roles": {
+    "title": "Roller",
+    "create": "Yeni Rol",
+    "edit": "Rolü Düzenle",
+    "delete": "Rolü Sil",
+    "fields": {
+      "name": "Rol Adı",
+      "slug": "Slug",
+      "description": "Açıklama",
+      "permissions": "İzinler",
+      "userCount": "Kullanıcı Sayısı"
+    },
+    "permissions": {
+      "title": "İzinler",
+      "selectAll": "Tümünü Seç",
+      "groups": {
+        "users": "Kullanıcılar",
+        "roles": "Roller",
+        "posts": "Yazılar",
+        "categories": "Kategoriler",
+        "tags": "Etiketler",
+        "media": "Medya",
+        "contacts": "İletişim",
+        "settings": "Ayarlar"
+      }
+    }
+  },
+  "posts": {
+    "title": "Yazılar",
+    "create": "Yeni Yazı",
+    "edit": "Yazıyı Düzenle",
+    "delete": "Yazıyı Sil",
+    "fields": {
+      "title": "Başlık",
+      "slug": "URL Slug",
+      "excerpt": "Özet",
+      "content": "İçerik",
+      "coverImage": "Kapak Görseli",
+      "category": "Kategori",
+      "tags": "Etiketler",
+      "status": "Durum",
+      "author": "Yazar",
+      "publishedAt": "Yayın Tarihi",
+      "viewCount": "Görüntülenme",
+      "featured": "Öne Çıkan",
+      "metaTitle": "Meta Başlık",
+      "metaDescription": "Meta Açıklama"
+    },
+    "status": {
+      "draft": "Taslak",
+      "pending": "Beklemede",
+      "published": "Yayında",
+      "archived": "Arşivlendi"
+    },
+    "actions": {
+      "publish": "Yayınla",
+      "unpublish": "Yayından Kaldır",
+      "duplicate": "Kopyala"
+    }
+  },
+  "categories": {
+    "title": "Kategoriler",
+    "create": "Yeni Kategori",
+    "edit": "Kategoriyi Düzenle",
+    "delete": "Kategoriyi Sil",
+    "fields": {
+      "name": "Ad",
+      "slug": "Slug",
+      "description": "Açıklama",
+      "parent": "Üst Kategori",
+      "postCount": "Yazı Sayısı"
+    }
+  },
+  "tags": {
+    "title": "Etiketler",
+    "create": "Yeni Etiket",
+    "edit": "Etiketi Düzenle",
+    "delete": "Etiketi Sil",
+    "fields": {
+      "name": "Ad",
+      "slug": "Slug",
+      "postCount": "Yazı Sayısı"
+    }
+  },
+  "media": {
+    "title": "Medya Kütüphanesi",
+    "upload": "Dosya Yükle",
+    "delete": "Sil",
+    "fields": {
+      "filename": "Dosya Adı",
+      "type": "Tür",
+      "size": "Boyut",
+      "uploadedAt": "Yüklenme Tarihi",
+      "uploadedBy": "Yükleyen"
+    },
+    "filters": {
+      "all": "Tümü",
+      "images": "Görseller",
+      "videos": "Videolar",
+      "documents": "Belgeler"
+    },
+    "dropzone": {
+      "title": "Dosyaları buraya bırakın",
+      "or": "veya",
+      "browse": "Bilgisayardan seçin"
+    }
+  },
+  "contacts": {
+    "title": "İletişim Formları",
+    "view": "Görüntüle",
+    "delete": "Sil",
+    "fields": {
+      "name": "Ad",
+      "email": "E-posta",
+      "subject": "Konu",
+      "message": "Mesaj",
+      "status": "Durum",
+      "createdAt": "Tarih"
+    },
+    "status": {
+      "new": "Yeni",
+      "read": "Okundu",
+      "replied": "Yanıtlandı",
+      "archived": "Arşivlendi"
+    }
+  },
+  "languages": {
+    "title": "Diller",
+    "create": "Yeni Dil",
+    "edit": "Dili Düzenle",
+    "fields": {
+      "code": "Dil Kodu",
+      "name": "Ad",
+      "nativeName": "Yerel Ad",
+      "isDefault": "Varsayılan Dil",
+      "isActive": "Aktif"
+    }
+  },
+  "translations": {
+    "title": "Çeviriler",
+    "import": "İçe Aktar",
+    "export": "Dışa Aktar",
+    "fields": {
+      "namespace": "Ad Alanı",
+      "key": "Anahtar",
+      "value": "Değer"
+    }
+  },
+  "settings": {
+    "title": "Ayarlar",
+    "save": "Kaydet",
+    "tabs": {
+      "general": "Genel",
+      "appearance": "Görünüm",
+      "email": "E-posta",
+      "security": "Güvenlik",
+      "seo": "SEO",
+      "social": "Sosyal"
+    },
+    "general": {
+      "siteName": "Site Adı",
+      "siteDescription": "Site Açıklaması",
+      "siteUrl": "Site URL",
+      "timezone": "Saat Dilimi",
+      "dateFormat": "Tarih Formatı",
+      "postsPerPage": "Sayfa Başına Yazı"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "generic": "Bir hata oluştu",
+  "notFound": "Sayfa bulunamadı",
+  "unauthorized": "Giriş gerekli",
+  "forbidden": "Bu işlem için yetkiniz yok",
+  "serverError": "Sunucu hatası",
+  "networkError": "Ağ hatası",
+  "validation": "Lütfen girişlerinizi kontrol edin",
+  "timeout": "İstek zaman aşımına uğradı",
+  "badRequest": "Geçersiz istek",
+  "conflict": "Veri çakışması",
+  "tooManyRequests": "Çok fazla istek gönderildi",
+  "serviceUnavailable": "Hizmet kullanılamıyor",
+  "pages": {
+    "404": {
+      "title": "Sayfa Bulunamadı",
+      "description": "Aradığınız sayfa mevcut değil veya kaldırılmış.",
+      "backHome": "Ana Sayfaya Dön",
+      "goBack": "Geri Dön"
+    },
+    "500": {
+      "title": "Sunucu Hatası",
+      "description": "Bir hata oluştu. Lütfen daha sonra tekrar deneyin.",
+      "retry": "Tekrar Dene",
+      "backHome": "Ana Sayfaya Dön"
+    },
+    "403": {
+      "title": "Erişim Engellendi",
+      "description": "Bu sayfaya erişim izniniz yok.",
+      "backHome": "Ana Sayfaya Dön",
+      "login": "Giriş Yap"
+    },
+    "401": {
+      "title": "Giriş Gerekli",
+      "description": "Bu sayfaya erişmek için giriş yapmalısınız.",
+      "login": "Giriş Yap"
+    },
+    "maintenance": {
+      "title": "Bakım",
+      "description": "Site şu anda bakımda. Kısa süre içinde geri döneceğiz."
+    }
+  },
+  "form": {
+    "required": "Bu alan zorunludur",
+    "email": "Geçerli bir e-posta girin",
+    "minLength": "En az {min} karakter olmalıdır",
+    "maxLength": "En fazla {max} karakter olabilir",
+    "pattern": "Geçersiz format",
+    "unique": "Bu değer zaten mevcut"
+  }
+}

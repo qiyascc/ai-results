@@ -1,0 +1,72 @@
+{
+  "title": "Blog",
+  "latestPosts": "Latest Posts",
+  "featuredPosts": "Featured Posts",
+  "allPosts": "All Posts",
+  "categories": "Categories",
+  "tags": "Tags",
+  "archives": "Archives",
+  "search": {
+    "placeholder": "Search posts...",
+    "noResults": "No results found",
+    "results": "{count} results found",
+    "searching": "Searching..."
+  },
+  "post": {
+    "by": "By:",
+    "publishedOn": "Published on:",
+    "updatedOn": "Updated on:",
+    "readMore": "Read more",
+    "readTime": "{minutes} min read",
+    "views": "{count} views",
+    "share": "Share",
+    "shareOn": "Share on {platform}",
+    "related": "Related Posts",
+    "copyLink": "Copy link",
+    "linkCopied": "Link copied!",
+    "notFound": "Post not found"
+  },
+  "comments": {
+    "title": "Comments",
+    "count": "{count} comments",
+    "writeComment": "Write a comment",
+    "placeholder": "Write your comment...",
+    "submit": "Submit",
+    "noComments": "No comments yet",
+    "beFirst": "Be the first to comment!",
+    "reply": "Reply",
+    "delete": "Delete",
+    "edit": "Edit",
+    "edited": "Edited",
+    "loadMore": "Load more",
+    "loginToComment": "Sign in to comment"
+  },
+  "sidebar": {
+    "about": "About",
+    "recentPosts": "Recent Posts",
+    "popularPosts": "Popular Posts",
+    "popularTags": "Popular Tags",
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Subscribe to stay updated",
+      "placeholder": "Your email",
+      "subscribe": "Subscribe",
+      "success": "Successfully subscribed!",
+      "error": "An error occurred"
+    }
+  },
+  "filters": {
+    "all": "All",
+    "sortBy": "Sort by",
+    "newest": "Newest",
+    "oldest": "Oldest",
+    "popular": "Popular",
+    "category": "Category",
+    "tag": "Tag"
+  },
+  "pagination": {
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page {current} of {total}"
+  }
+}

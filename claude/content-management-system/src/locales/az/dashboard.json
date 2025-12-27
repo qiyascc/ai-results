@@ -1,0 +1,57 @@
+{
+  "title": "İdarə Paneli",
+  "welcome": "Xoş gəldiniz!",
+  "overview": "Ümumi baxış",
+  "stats": {
+    "totalViews": "Ümumi baxış",
+    "totalPosts": "Yazılar",
+    "totalComments": "Şərhlər",
+    "newUsers": "Yeni istifadəçilər"
+  },
+  "recentActivity": "Son fəaliyyətlər",
+  "quickActions": {
+    "title": "Sürətli əməliyyatlar",
+    "newPost": "Yeni yazı",
+    "uploadMedia": "Media yüklə",
+    "viewSite": "Sayta bax",
+    "viewAdmin": "Admin paneli"
+  },
+  "profile": {
+    "title": "Profil",
+    "edit": "Profili redaktə et",
+    "changePassword": "Şifrəni dəyiş",
+    "preferences": "Seçimlər",
+    "avatar": "Avatar",
+    "name": "Ad",
+    "email": "E-poçt",
+    "bio": "Haqqında",
+    "website": "Veb sayt",
+    "location": "Məkan",
+    "save": "Yadda saxla",
+    "updated": "Profil yeniləndi"
+  },
+  "chat": {
+    "title": "AI Söhbət",
+    "placeholder": "Mesaj yazın...",
+    "send": "Göndər",
+    "newChat": "Yeni söhbət",
+    "history": "Söhbət tarixçəsi",
+    "deleteChat": "Söhbəti sil",
+    "clearHistory": "Tarixçəni təmizlə",
+    "typing": "Yazır...",
+    "noMessages": "Mesaj yoxdur",
+    "startConversation": "Söhbətə başlayın"
+  },
+  "notifications": {
+    "title": "Bildirişlər",
+    "markAllRead": "Hamısını oxunmuş et",
+    "noNotifications": "Bildiriş yoxdur",
+    "viewAll": "Hamısına bax"
+  },
+  "sidebar": {
+    "dashboard": "İdarə paneli",
+    "profile": "Profil",
+    "chat": "AI Söhbət",
+    "settings": "Tənzimləmələr"
+  }
+}

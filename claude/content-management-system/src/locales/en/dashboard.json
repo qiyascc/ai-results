@@ -1,0 +1,57 @@
+{
+  "title": "Dashboard",
+  "welcome": "Welcome!",
+  "overview": "Overview",
+  "stats": {
+    "totalViews": "Total Views",
+    "totalPosts": "Posts",
+    "totalComments": "Comments",
+    "newUsers": "New Users"
+  },
+  "recentActivity": "Recent Activity",
+  "quickActions": {
+    "title": "Quick Actions",
+    "newPost": "New Post",
+    "uploadMedia": "Upload Media",
+    "viewSite": "View Site",
+    "viewAdmin": "Admin Panel"
+  },
+  "profile": {
+    "title": "Profile",
+    "edit": "Edit Profile",
+    "changePassword": "Change Password",
+    "preferences": "Preferences",
+    "avatar": "Avatar",
+    "name": "Name",
+    "email": "Email",
+    "bio": "Bio",
+    "website": "Website",
+    "location": "Location",
+    "save": "Save",
+    "updated": "Profile updated"
+  },
+  "chat": {
+    "title": "AI Chat",
+    "placeholder": "Type a message...",
+    "send": "Send",
+    "newChat": "New Chat",
+    "history": "Chat History",
+    "deleteChat": "Delete Chat",
+    "clearHistory": "Clear History",
+    "typing": "Typing...",
+    "noMessages": "No messages",
+    "startConversation": "Start a conversation"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "markAllRead": "Mark all as read",
+    "noNotifications": "No notifications",
+    "viewAll": "View all"
+  },
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "profile": "Profile",
+    "chat": "AI Chat",
+    "settings": "Settings"
+  }
+}
