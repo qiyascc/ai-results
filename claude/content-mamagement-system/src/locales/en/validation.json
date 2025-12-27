@@ -1,0 +1,20 @@
+{
+  "required": "This field is required",
+  "email": "Please enter a valid email",
+  "minLength": "Must be at least {min} characters",
+  "maxLength": "Must be at most {max} characters",
+  "min": "Minimum value is {min}",
+  "max": "Maximum value is {max}",
+  "pattern": "Invalid format",
+  "passwordStrength": {
+    "weak": "Weak password",
+    "medium": "Medium password",
+    "strong": "Strong password"
+  },
+  "passwordMatch": "Passwords do not match",
+  "uniqueEmail": "This email is already in use",
+  "invalidSlug": "Slug can only contain lowercase letters, numbers, and hyphens",
+  "invalidUrl": "Please enter a valid URL",
+  "fileSize": "File size cannot exceed {max} MB",
+  "fileType": "This file type is not supported"
+}

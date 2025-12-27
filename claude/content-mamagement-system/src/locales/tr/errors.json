@@ -1,0 +1,26 @@
+{
+  "generic": "Bir hata oluştu",
+  "notFound": "Sayfa bulunamadı",
+  "unauthorized": "Giriş yapmanız gerekiyor",
+  "forbidden": "Bu işlem için yetkiniz yok",
+  "serverError": "Sunucu hatası",
+  "networkError": "Ağ hatası",
+  "validation": "Lütfen girişlerinizi kontrol edin",
+  "timeout": "İstek zaman aşımına uğradı",
+  "pages": {
+    "404": {
+      "title": "Sayfa bulunamadı",
+      "description": "Aradığınız sayfa mevcut değil.",
+      "backHome": "Ana sayfaya dön"
+    },
+    "500": {
+      "title": "Sunucu hatası",
+      "description": "Bir şeyler ters gitti. Lütfen daha sonra tekrar deneyin.",
+      "retry": "Tekrar dene"
+    },
+    "403": {
+      "title": "Erişim engellendi",
+      "description": "Bu sayfaya erişim izniniz yok."
+    }
+  }
+}

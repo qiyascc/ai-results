@@ -1,0 +1,38 @@
+{
+  "title": "Blog",
+  "latestPosts": "Latest posts",
+  "featuredPosts": "Featured posts",
+  "allPosts": "All posts",
+  "categories": "Categories",
+  "tags": "Tags",
+  "search": {
+    "placeholder": "Search posts...",
+    "noResults": "No results found"
+  },
+  "post": {
+    "by": "By:",
+    "publishedOn": "Published on:",
+    "readMore": "Read more",
+    "readTime": "{minutes} min read",
+    "views": "{count} views",
+    "share": "Share",
+    "related": "Related posts"
+  },
+  "comments": {
+    "title": "Comments",
+    "writeComment": "Write a comment",
+    "submit": "Submit",
+    "noComments": "No comments yet"
+  },
+  "sidebar": {
+    "about": "About",
+    "recentPosts": "Recent posts",
+    "popularTags": "Popular tags",
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Subscribe to stay updated",
+      "placeholder": "Your email",
+      "subscribe": "Subscribe"
+    }
+  }
+}

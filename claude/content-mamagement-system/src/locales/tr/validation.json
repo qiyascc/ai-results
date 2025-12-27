@@ -1,0 +1,20 @@
+{
+  "required": "Bu alan zorunludur",
+  "email": "Geçerli bir e-posta girin",
+  "minLength": "En az {min} karakter olmalıdır",
+  "maxLength": "En fazla {max} karakter olabilir",
+  "min": "Minimum değer {min} olmalıdır",
+  "max": "Maksimum değer {max} olabilir",
+  "pattern": "Geçersiz format",
+  "passwordStrength": {
+    "weak": "Zayıf şifre",
+    "medium": "Orta şifre",
+    "strong": "Güçlü şifre"
+  },
+  "passwordMatch": "Şifreler eşleşmiyor",
+  "uniqueEmail": "Bu e-posta zaten kullanımda",
+  "invalidSlug": "Slug sadece küçük harf, rakam ve tire içerebilir",
+  "invalidUrl": "Geçerli bir URL girin",
+  "fileSize": "Dosya boyutu {max} MB'ı aşamaz",
+  "fileType": "Bu dosya türü desteklenmiyor"
+}

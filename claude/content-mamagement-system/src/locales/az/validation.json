@@ -1,0 +1,20 @@
+{
+  "required": "Bu sahə məcburidir",
+  "email": "Düzgün e-poçt daxil edin",
+  "minLength": "Minimum {min} simvol olmalıdır",
+  "maxLength": "Maksimum {max} simvol ola bilər",
+  "min": "Minimum dəyər {min} olmalıdır",
+  "max": "Maksimum dəyər {max} ola bilər",
+  "pattern": "Format düzgün deyil",
+  "passwordStrength": {
+    "weak": "Zəif şifrə",
+    "medium": "Orta şifrə",
+    "strong": "Güclü şifrə"
+  },
+  "passwordMatch": "Şifrələr uyğun gəlmir",
+  "uniqueEmail": "Bu e-poçt artıq istifadə olunur",
+  "invalidSlug": "Slug yalnız kiçik hərf, rəqəm və tire ola bilər",
+  "invalidUrl": "Düzgün URL daxil edin",
+  "fileSize": "Fayl ölçüsü {max} MB-dan çox ola bilməz",
+  "fileType": "Bu fayl növü dəstəklənmir"
+}

@@ -1,0 +1,122 @@
+{
+  "title": "Admin Paneli",
+  "welcome": "Xoş gəldiniz, {name}",
+  "sidebar": {
+    "dashboard": "İdarə Paneli",
+    "users": "İstifadəçilər",
+    "roles": "Rollar",
+    "posts": "Yazılar",
+    "categories": "Kateqoriyalar",
+    "tags": "Etiketlər",
+    "media": "Media",
+    "contacts": "Əlaqə Formaları",
+    "languages": "Dillər",
+    "translations": "Tərcümələr",
+    "settings": "Tənzimləmələr"
+  },
+  "dashboard": {
+    "title": "İdarə Paneli",
+    "stats": {
+      "users": "İstifadəçilər",
+      "posts": "Yazılar",
+      "categories": "Kateqoriyalar",
+      "media": "Media faylları"
+    },
+    "recentPosts": "Son Yazılar",
+    "recentUsers": "Son Qeydiyyatlar"
+  },
+  "users": {
+    "title": "İstifadəçilər",
+    "create": "Yeni İstifadəçi",
+    "edit": "İstifadəçini Redaktə Et",
+    "fields": {
+      "name": "Ad",
+      "email": "E-poçt",
+      "role": "Rol",
+      "status": "Status",
+      "createdAt": "Qeydiyyat tarixi"
+    }
+  },
+  "roles": {
+    "title": "Rollar",
+    "create": "Yeni Rol",
+    "edit": "Rolu Redaktə Et",
+    "fields": {
+      "name": "Rol adı",
+      "slug": "Slug",
+      "description": "Təsvir",
+      "permissions": "İcazələr"
+    }
+  },
+  "posts": {
+    "title": "Yazılar",
+    "create": "Yeni Yazı",
+    "edit": "Yazını Redaktə Et",
+    "fields": {
+      "title": "Başlıq",
+      "slug": "URL Slug",
+      "excerpt": "Qısa təsvir",
+      "content": "Məzmun",
+      "coverImage": "Örtük şəkli",
+      "category": "Kateqoriya",
+      "tags": "Etiketlər",
+      "status": "Status"
+    },
+    "status": {
+      "draft": "Qaralama",
+      "pending": "Təsdiq gözləyir",
+      "published": "Dərc edilib",
+      "archived": "Arxivlənib"
+    }
+  },
+  "categories": {
+    "title": "Kateqoriyalar",
+    "create": "Yeni Kateqoriya",
+    "edit": "Kateqoriyanı Redaktə Et",
+    "fields": {
+      "name": "Ad",
+      "slug": "Slug",
+      "description": "Təsvir",
+      "parent": "Üst kateqoriya"
+    }
+  },
+  "media": {
+    "title": "Media Kitabxanası",
+    "upload": "Fayl Yüklə",
+    "fields": {
+      "filename": "Fayl adı",
+      "type": "Növ",
+      "size": "Ölçü"
+    }
+  },
+  "languages": {
+    "title": "Dillər",
+    "create": "Yeni Dil",
+    "fields": {
+      "code": "Dil kodu",
+      "name": "Ad",
+      "nativeName": "Yerli ad",
+      "isDefault": "Standart dil",
+      "isActive": "Aktiv"
+    }
+  },
+  "translations": {
+    "title": "Tərcümələr",
+    "import": "İdxal et",
+    "export": "İxrac et",
+    "fields": {
+      "namespace": "Ad sahəsi",
+      "key": "Açar",
+      "value": "Dəyər"
+    }
+  },
+  "settings": {
+    "title": "Tənzimləmələr",
+    "tabs": {
+      "general": "Ümumi",
+      "appearance": "Görünüş",
+      "email": "E-poçt",
+      "security": "Təhlükəsizlik"
+    }
+  }
+}

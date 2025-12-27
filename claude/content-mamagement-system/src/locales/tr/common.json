@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "title": "Qiyas CMS",
+    "description": "Modern içerik yönetim sistemi"
+  },
+  "navigation": {
+    "home": "Ana Sayfa",
+    "blog": "Blog",
+    "about": "Hakkımızda",
+    "contact": "İletişim",
+    "login": "Giriş Yap",
+    "register": "Kayıt Ol",
+    "dashboard": "Panel",
+    "admin": "Yönetim",
+    "logout": "Çıkış",
+    "profile": "Profil",
+    "settings": "Ayarlar"
+  },
+  "language": {
+    "label": "Dil",
+    "select": "Dil seçin",
+    "az": "Azərbaycan",
+    "en": "English",
+    "tr": "Türkçe"
+  },
+  "theme": {
+    "label": "Tema",
+    "light": "Açık",
+    "dark": "Koyu",
+    "system": "Sistem"
+  },
+  "actions": {
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "delete": "Sil",
+    "edit": "Düzenle",
+    "create": "Oluştur",
+    "update": "Güncelle",
+    "submit": "Gönder",
+    "search": "Ara",
+    "filter": "Filtrele",
+    "clear": "Temizle",
+    "back": "Geri",
+    "next": "İleri",
+    "close": "Kapat",
+    "upload": "Yükle",
+    "download": "İndir",
+    "copy": "Kopyala",
+    "view": "Görüntüle",
+    "viewAll": "Tümünü gör",
+    "showMore": "Daha fazla göster",
+    "loading": "Yükleniyor...",
+    "confirm": "Onayla",
+    "refresh": "Yenile"
+  },
+  "status": {
+    "active": "Aktif",
+    "inactive": "Pasif",
+    "pending": "Beklemede",
+    "published": "Yayında",
+    "draft": "Taslak",
+    "archived": "Arşivlendi"
+  },
+  "messages": {
+    "success": "İşlem başarıyla tamamlandı",
+    "error": "Bir hata oluştu",
+    "warning": "Uyarı",
+    "info": "Bilgi",
+    "loading": "Yükleniyor...",
+    "noData": "Veri bulunamadı",
+    "noResults": "Sonuç bulunamadı",
+    "confirmDelete": "Bu öğeyi silmek istediğinizden emin misiniz?",
+    "deleteWarning": "Bu işlem geri alınamaz.",
+    "savedSuccessfully": "Başarıyla kaydedildi",
+    "deletedSuccessfully": "Başarıyla silindi",
+    "copiedToClipboard": "Panoya kopyalandı"
+  },
+  "pagination": {
+    "page": "Sayfa",
+    "of": "/",
+    "items": "öğe",
+    "showing": "Gösterilen",
+    "first": "İlk",
+    "last": "Son",
+    "next": "Sonraki",
+    "previous": "Önceki",
+    "rowsPerPage": "Sayfa başına satır"
+  },
+  "table": {
+    "noData": "Veri yok",
+    "loading": "Yükleniyor...",
+    "actions": "İşlemler",
+    "selectAll": "Tümünü seç"
+  },
+  "form": {
+    "required": "Bu alan zorunludur",
+    "optional": "İsteğe bağlı",
+    "invalidEmail": "Geçersiz e-posta formatı",
+    "passwordTooShort": "Şifre en az 8 karakter olmalıdır",
+    "passwordMismatch": "Şifreler eşleşmiyor"
+  },
+  "footer": {
+    "copyright": "© {year} Qiyas. Tüm hakları saklıdır.",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Koşulları"
+  }
+}

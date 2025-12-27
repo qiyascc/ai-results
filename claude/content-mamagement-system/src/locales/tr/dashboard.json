@@ -1,0 +1,31 @@
+{
+  "title": "Panel",
+  "welcome": "Hoş geldiniz!",
+  "overview": "Genel bakış",
+  "stats": {
+    "totalViews": "Toplam görüntüleme",
+    "totalPosts": "Yazılar",
+    "totalComments": "Yorumlar",
+    "newUsers": "Yeni kullanıcılar"
+  },
+  "recentActivity": "Son aktiviteler",
+  "quickActions": {
+    "title": "Hızlı işlemler",
+    "newPost": "Yeni yazı",
+    "uploadMedia": "Medya yükle",
+    "viewSite": "Siteyi görüntüle"
+  },
+  "profile": {
+    "title": "Profil",
+    "edit": "Profili düzenle",
+    "changePassword": "Şifre değiştir",
+    "preferences": "Tercihler"
+  },
+  "chat": {
+    "title": "AI Sohbet",
+    "placeholder": "Mesaj yazın...",
+    "send": "Gönder",
+    "newChat": "Yeni sohbet",
+    "history": "Sohbet geçmişi"
+  }
+}

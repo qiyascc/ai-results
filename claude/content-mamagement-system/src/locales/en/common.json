@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "title": "Qiyas CMS",
+    "description": "Modern content management system"
+  },
+  "navigation": {
+    "home": "Home",
+    "blog": "Blog",
+    "about": "About",
+    "contact": "Contact",
+    "login": "Login",
+    "register": "Register",
+    "dashboard": "Dashboard",
+    "admin": "Admin",
+    "logout": "Logout",
+    "profile": "Profile",
+    "settings": "Settings"
+  },
+  "language": {
+    "label": "Language",
+    "select": "Select language",
+    "az": "Azərbaycan",
+    "en": "English",
+    "tr": "Türkçe"
+  },
+  "theme": {
+    "label": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "actions": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "update": "Update",
+    "submit": "Submit",
+    "search": "Search",
+    "filter": "Filter",
+    "clear": "Clear",
+    "back": "Back",
+    "next": "Next",
+    "close": "Close",
+    "upload": "Upload",
+    "download": "Download",
+    "copy": "Copy",
+    "view": "View",
+    "viewAll": "View all",
+    "showMore": "Show more",
+    "loading": "Loading...",
+    "confirm": "Confirm",
+    "refresh": "Refresh"
+  },
+  "status": {
+    "active": "Active",
+    "inactive": "Inactive",
+    "pending": "Pending",
+    "published": "Published",
+    "draft": "Draft",
+    "archived": "Archived"
+  },
+  "messages": {
+    "success": "Operation completed successfully",
+    "error": "An error occurred",
+    "warning": "Warning",
+    "info": "Information",
+    "loading": "Loading...",
+    "noData": "No data found",
+    "noResults": "No results found",
+    "confirmDelete": "Are you sure you want to delete this item?",
+    "deleteWarning": "This action cannot be undone.",
+    "savedSuccessfully": "Saved successfully",
+    "deletedSuccessfully": "Deleted successfully",
+    "copiedToClipboard": "Copied to clipboard"
+  },
+  "pagination": {
+    "page": "Page",
+    "of": "of",
+    "items": "items",
+    "showing": "Showing",
+    "first": "First",
+    "last": "Last",
+    "next": "Next",
+    "previous": "Previous",
+    "rowsPerPage": "Rows per page"
+  },
+  "table": {
+    "noData": "No data",
+    "loading": "Loading...",
+    "actions": "Actions",
+    "selectAll": "Select all"
+  },
+  "form": {
+    "required": "This field is required",
+    "optional": "Optional",
+    "invalidEmail": "Invalid email format",
+    "passwordTooShort": "Password must be at least 8 characters",
+    "passwordMismatch": "Passwords do not match"
+  },
+  "footer": {
+    "copyright": "© {year} Qiyas. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}

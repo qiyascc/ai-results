@@ -1,0 +1,26 @@
+{
+  "generic": "Xəta baş verdi",
+  "notFound": "Səhifə tapılmadı",
+  "unauthorized": "Giriş tələb olunur",
+  "forbidden": "Bu əməliyyat üçün icazəniz yoxdur",
+  "serverError": "Server xətası",
+  "networkError": "Şəbəkə xətası",
+  "validation": "Məlumatları yoxlayın",
+  "timeout": "Sorğu müddəti bitdi",
+  "pages": {
+    "404": {
+      "title": "Səhifə tapılmadı",
+      "description": "Axtardığınız səhifə mövcud deyil.",
+      "backHome": "Ana səhifəyə qayıt"
+    },
+    "500": {
+      "title": "Server xətası",
+      "description": "Bir xəta baş verdi. Zəhmət olmasa daha sonra yenidən cəhd edin.",
+      "retry": "Yenidən cəhd et"
+    },
+    "403": {
+      "title": "Giriş qadağandır",
+      "description": "Bu səhifəyə giriş icazəniz yoxdur."
+    }
+  }
+}

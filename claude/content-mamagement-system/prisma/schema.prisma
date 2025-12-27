@@ -1,0 +1,505 @@
+// ==================== PRISMA SCHEMA ====================
+// Qiyas CMS Database Schema
+// Multi-language CMS with RBAC, AI Chat, and Media Management
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ==================== AUTHENTICATION ====================
+
+model User {
+  id            String     @id @default(cuid())
+  email         String     @unique
+  emailVerified DateTime?
+  password      String?
+  name          String?
+  avatar        String?
+  bio           String?
+  locale        String     @default("az")
+  status        UserStatus @default(ACTIVE)
+  lastLoginAt   DateTime?
+  lastLoginIp   String?
+
+  roleId String
+  role   Role   @relation(fields: [roleId], references: [id])
+
+  sessions     Session[]
+  posts        Post[]
+  mediaItems   Media[]
+  chatSessions ChatSession[]
+  auditLogs    AuditLog[]
+  notifications Notification[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([email])
+  @@index([roleId])
+  @@map("users")
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  userId       String
+  token        String   @unique
+  refreshToken String?  @unique
+  userAgent    String?
+  ipAddress    String?
+  expiresAt    DateTime
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+  @@index([token])
+  @@map("sessions")
+}
+
+// ==================== RBAC ====================
+
+model Role {
+  id          String  @id @default(cuid())
+  name        String  @unique
+  slug        String  @unique
+  description String?
+  isSystem    Boolean @default(false)
+
+  users       User[]
+  permissions RolePermission[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("roles")
+}
+
+model Permission {
+  id          String @id @default(cuid())
+  name        String @unique
+  resource    String
+  action      String
+  description String?
+
+  roles RolePermission[]
+
+  createdAt DateTime @default(now())
+
+  @@unique([resource, action])
+  @@map("permissions")
+}
+
+model RolePermission {
+  roleId       String
+  permissionId String
+
+  role       Role       @relation(fields: [roleId], references: [id], onDelete: Cascade)
+  permission Permission @relation(fields: [permissionId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+
+  @@id([roleId, permissionId])
+  @@map("role_permissions")
+}
+
+// ==================== INTERNATIONALIZATION ====================
+
+model Language {
+  id         String        @id @default(cuid())
+  code       String        @unique
+  name       String
+  nativeName String
+  flag       String?
+  direction  TextDirection @default(LTR)
+  isDefault  Boolean       @default(false)
+  isActive   Boolean       @default(true)
+  sortOrder  Int           @default(0)
+
+  postTranslations     PostTranslation[]
+  categoryTranslations CategoryTranslation[]
+  translations         Translation[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("languages")
+}
+
+model Translation {
+  id         String @id @default(cuid())
+  languageId String
+  namespace  String
+  key        String
+  value      String @db.Text
+
+  language Language @relation(fields: [languageId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([languageId, namespace, key])
+  @@index([namespace])
+  @@map("translations")
+}
+
+// ==================== CONTENT ====================
+
+model Post {
+  id         String     @id @default(cuid())
+  slug       String     @unique
+  coverImage String?
+  status     PostStatus @default(DRAFT)
+  featured   Boolean    @default(false)
+  views      Int        @default(0)
+
+  authorId String
+  author   User   @relation(fields: [authorId], references: [id])
+
+  translations PostTranslation[]
+  categories   PostCategory[]
+  tags         PostTag[]
+
+  publishedAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@index([slug])
+  @@index([status, publishedAt])
+  @@index([authorId])
+  @@map("posts")
+}
+
+model PostTranslation {
+  id         String @id @default(cuid())
+  postId     String
+  languageId String
+
+  title           String
+  excerpt         String? @db.Text
+  content         String  @db.Text
+  metaTitle       String?
+  metaDescription String?
+  metaKeywords    String?
+
+  post     Post     @relation(fields: [postId], references: [id], onDelete: Cascade)
+  language Language @relation(fields: [languageId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([postId, languageId])
+  @@map("post_translations")
+}
+
+model Category {
+  id        String  @id @default(cuid())
+  slug      String  @unique
+  parentId  String?
+  image     String?
+  sortOrder Int     @default(0)
+  isActive  Boolean @default(true)
+
+  parent       Category?             @relation("CategoryHierarchy", fields: [parentId], references: [id])
+  children     Category[]            @relation("CategoryHierarchy")
+  translations CategoryTranslation[]
+  posts        PostCategory[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([parentId])
+  @@map("categories")
+}
+
+model CategoryTranslation {
+  id         String @id @default(cuid())
+  categoryId String
+  languageId String
+
+  name            String
+  description     String? @db.Text
+  metaTitle       String?
+  metaDescription String?
+
+  category Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  language Language @relation(fields: [languageId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([categoryId, languageId])
+  @@map("category_translations")
+}
+
+model Tag {
+  id    String @id @default(cuid())
+  name  String @unique
+  slug  String @unique
+
+  posts PostTag[]
+
+  createdAt DateTime @default(now())
+
+  @@map("tags")
+}
+
+model PostCategory {
+  postId     String
+  categoryId String
+
+  post     Post     @relation(fields: [postId], references: [id], onDelete: Cascade)
+  category Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+
+  @@id([postId, categoryId])
+  @@map("post_categories")
+}
+
+model PostTag {
+  postId String
+  tagId  String
+
+  post Post @relation(fields: [postId], references: [id], onDelete: Cascade)
+  tag  Tag  @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@id([postId, tagId])
+  @@map("post_tags")
+}
+
+// ==================== MEDIA ====================
+
+model Media {
+  id           String  @id @default(cuid())
+  filename     String
+  originalName String
+  mimeType     String
+  size         Int
+  path         String
+  url          String
+  width        Int?
+  height       Int?
+  altText      String?
+  caption      String?
+  thumbnails   Json?
+  folder       String?
+
+  uploadedById String
+  uploadedBy   User   @relation(fields: [uploadedById], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([folder])
+  @@index([mimeType])
+  @@index([uploadedById])
+  @@map("media")
+}
+
+// ==================== AI CHAT ====================
+
+model ChatSession {
+  id           String  @id @default(cuid())
+  title        String?
+  userId       String
+  model        String  @default("claude-3-sonnet")
+  systemPrompt String? @db.Text
+  temperature  Float   @default(0.7)
+
+  user     User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  messages ChatMessage[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+  @@map("chat_sessions")
+}
+
+model ChatMessage {
+  id        String      @id @default(cuid())
+  sessionId String
+  role      MessageRole
+  content   String      @db.Text
+  tokens    Int?
+  model     String?
+
+  session ChatSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+
+  @@index([sessionId, createdAt])
+  @@map("chat_messages")
+}
+
+// ==================== CONTACT ====================
+
+model Contact {
+  id        String        @id @default(cuid())
+  firstName String
+  lastName  String
+  email     String
+  phone     String?
+  subject   String
+  message   String        @db.Text
+  status    ContactStatus @default(NEW)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([status])
+  @@index([email])
+  @@map("contacts")
+}
+
+// ==================== NOTIFICATIONS ====================
+
+model Notification {
+  id      String           @id @default(cuid())
+  userId  String
+  type    NotificationType
+  title   String
+  message String
+  link    String?
+  isRead  Boolean          @default(false)
+  data    Json?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+
+  @@index([userId, isRead])
+  @@map("notifications")
+}
+
+// ==================== SYSTEM ====================
+
+model Setting {
+  id       String      @id @default(cuid())
+  key      String      @unique
+  value    Json
+  type     SettingType @default(STRING)
+  group    String      @default("general")
+  isPublic Boolean     @default(false)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([group])
+  @@map("settings")
+}
+
+model AuditLog {
+  id        String  @id @default(cuid())
+  action    String
+  entity    String
+  entityId  String?
+  userId    String?
+  oldValue  Json?
+  newValue  Json?
+  ipAddress String?
+  userAgent String?
+  metadata  Json?
+
+  user User? @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  createdAt DateTime @default(now())
+
+  @@index([entity, entityId])
+  @@index([userId])
+  @@index([action])
+  @@index([createdAt])
+  @@map("audit_logs")
+}
+
+model ApiKey {
+  id        String   @id @default(cuid())
+  name      String
+  key       String   @unique
+  provider  String
+  isActive  Boolean  @default(true)
+  lastUsed  DateTime?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("api_keys")
+}
+
+// ==================== ANALYTICS ====================
+
+model PageView {
+  id        String   @id @default(cuid())
+  path      String
+  visitorId String
+  sessionId String?
+  referrer  String?
+  userAgent String?
+  country   String?
+  city      String?
+  device    String?
+  browser   String?
+  os        String?
+
+  createdAt DateTime @default(now())
+
+  @@index([path])
+  @@index([visitorId])
+  @@index([createdAt])
+  @@map("page_views")
+}
+
+// ==================== ENUMS ====================
+
+enum UserStatus {
+  ACTIVE
+  INACTIVE
+  SUSPENDED
+  PENDING
+}
+
+enum PostStatus {
+  DRAFT
+  PENDING_REVIEW
+  PUBLISHED
+  ARCHIVED
+}
+
+enum TextDirection {
+  LTR
+  RTL
+}
+
+enum MessageRole {
+  USER
+  ASSISTANT
+  SYSTEM
+}
+
+enum SettingType {
+  STRING
+  NUMBER
+  BOOLEAN
+  JSON
+  TEXT
+}
+
+enum ContactStatus {
+  NEW
+  READ
+  REPLIED
+  ARCHIVED
+}
+
+enum NotificationType {
+  INFO
+  SUCCESS
+  WARNING
+  ERROR
+  SYSTEM
+}

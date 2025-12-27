@@ -1,0 +1,31 @@
+{
+  "title": "İdarə Paneli",
+  "welcome": "Xoş gəldiniz!",
+  "overview": "Ümumi baxış",
+  "stats": {
+    "totalViews": "Ümumi baxış sayı",
+    "totalPosts": "Yazılar",
+    "totalComments": "Şərhlər",
+    "newUsers": "Yeni istifadəçilər"
+  },
+  "recentActivity": "Son fəaliyyətlər",
+  "quickActions": {
+    "title": "Sürətli əməliyyatlar",
+    "newPost": "Yeni yazı",
+    "uploadMedia": "Media yüklə",
+    "viewSite": "Sayta bax"
+  },
+  "profile": {
+    "title": "Profil",
+    "edit": "Profili redaktə et",
+    "changePassword": "Şifrəni dəyiş",
+    "preferences": "Seçimlər"
+  },
+  "chat": {
+    "title": "AI Söhbət",
+    "placeholder": "Mesaj yazın...",
+    "send": "Göndər",
+    "newChat": "Yeni söhbət",
+    "history": "Söhbət tarixçəsi"
+  }
+}

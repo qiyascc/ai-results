@@ -1,0 +1,122 @@
+{
+  "title": "Yönetim Paneli",
+  "welcome": "Hoş geldiniz, {name}",
+  "sidebar": {
+    "dashboard": "Panel",
+    "users": "Kullanıcılar",
+    "roles": "Roller",
+    "posts": "Yazılar",
+    "categories": "Kategoriler",
+    "tags": "Etiketler",
+    "media": "Medya",
+    "contacts": "İletişim Formları",
+    "languages": "Diller",
+    "translations": "Çeviriler",
+    "settings": "Ayarlar"
+  },
+  "dashboard": {
+    "title": "Panel",
+    "stats": {
+      "users": "Kullanıcılar",
+      "posts": "Yazılar",
+      "categories": "Kategoriler",
+      "media": "Medya dosyaları"
+    },
+    "recentPosts": "Son Yazılar",
+    "recentUsers": "Son Kayıtlar"
+  },
+  "users": {
+    "title": "Kullanıcılar",
+    "create": "Yeni Kullanıcı",
+    "edit": "Kullanıcıyı Düzenle",
+    "fields": {
+      "name": "Ad",
+      "email": "E-posta",
+      "role": "Rol",
+      "status": "Durum",
+      "createdAt": "Kayıt tarihi"
+    }
+  },
+  "roles": {
+    "title": "Roller",
+    "create": "Yeni Rol",
+    "edit": "Rolü Düzenle",
+    "fields": {
+      "name": "Rol adı",
+      "slug": "Slug",
+      "description": "Açıklama",
+      "permissions": "İzinler"
+    }
+  },
+  "posts": {
+    "title": "Yazılar",
+    "create": "Yeni Yazı",
+    "edit": "Yazıyı Düzenle",
+    "fields": {
+      "title": "Başlık",
+      "slug": "URL Slug",
+      "excerpt": "Özet",
+      "content": "İçerik",
+      "coverImage": "Kapak Resmi",
+      "category": "Kategori",
+      "tags": "Etiketler",
+      "status": "Durum"
+    },
+    "status": {
+      "draft": "Taslak",
+      "pending": "Onay Bekliyor",
+      "published": "Yayında",
+      "archived": "Arşivlendi"
+    }
+  },
+  "categories": {
+    "title": "Kategoriler",
+    "create": "Yeni Kategori",
+    "edit": "Kategoriyi Düzenle",
+    "fields": {
+      "name": "Ad",
+      "slug": "Slug",
+      "description": "Açıklama",
+      "parent": "Üst kategori"
+    }
+  },
+  "media": {
+    "title": "Medya Kütüphanesi",
+    "upload": "Dosya Yükle",
+    "fields": {
+      "filename": "Dosya adı",
+      "type": "Tür",
+      "size": "Boyut"
+    }
+  },
+  "languages": {
+    "title": "Diller",
+    "create": "Yeni Dil",
+    "fields": {
+      "code": "Dil kodu",
+      "name": "Ad",
+      "nativeName": "Yerel ad",
+      "isDefault": "Varsayılan dil",
+      "isActive": "Aktif"
+    }
+  },
+  "translations": {
+    "title": "Çeviriler",
+    "import": "İçe Aktar",
+    "export": "Dışa Aktar",
+    "fields": {
+      "namespace": "Ad alanı",
+      "key": "Anahtar",
+      "value": "Değer"
+    }
+  },
+  "settings": {
+    "title": "Ayarlar",
+    "tabs": {
+      "general": "Genel",
+      "appearance": "Görünüm",
+      "email": "E-posta",
+      "security": "Güvenlik"
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "title": "Qiyas CMS",
+    "description": "Müasir kontent idarəetmə sistemi"
+  },
+  "navigation": {
+    "home": "Ana səhifə",
+    "blog": "Bloq",
+    "about": "Haqqımızda",
+    "contact": "Əlaqə",
+    "login": "Giriş",
+    "register": "Qeydiyyat",
+    "dashboard": "İdarə paneli",
+    "admin": "Admin",
+    "logout": "Çıxış",
+    "profile": "Profil",
+    "settings": "Tənzimləmələr"
+  },
+  "language": {
+    "label": "Dil",
+    "select": "Dil seçin",
+    "az": "Azərbaycan",
+    "en": "English",
+    "tr": "Türkçe"
+  },
+  "theme": {
+    "label": "Tema",
+    "light": "İşıqlı",
+    "dark": "Qaranlıq",
+    "system": "Sistem"
+  },
+  "actions": {
+    "save": "Yadda saxla",
+    "cancel": "Ləğv et",
+    "delete": "Sil",
+    "edit": "Redaktə et",
+    "create": "Yarat",
+    "update": "Yenilə",
+    "submit": "Göndər",
+    "search": "Axtar",
+    "filter": "Filtr",
+    "clear": "Təmizlə",
+    "back": "Geri",
+    "next": "İrəli",
+    "close": "Bağla",
+    "upload": "Yüklə",
+    "download": "Endir",
+    "copy": "Kopyala",
+    "view": "Bax",
+    "viewAll": "Hamısına bax",
+    "showMore": "Daha çox göstər",
+    "loading": "Yüklənir...",
+    "confirm": "Təsdiqlə",
+    "refresh": "Yenilə"
+  },
+  "status": {
+    "active": "Aktiv",
+    "inactive": "Deaktiv",
+    "pending": "Gözləyir",
+    "published": "Dərc edilib",
+    "draft": "Qaralama",
+    "archived": "Arxivlənib"
+  },
+  "messages": {
+    "success": "Əməliyyat uğurla tamamlandı",
+    "error": "Xəta baş verdi",
+    "warning": "Diqqət",
+    "info": "Məlumat",
+    "loading": "Yüklənir...",
+    "noData": "Məlumat tapılmadı",
+    "noResults": "Nəticə tapılmadı",
+    "confirmDelete": "Bu elementi silmək istədiyinizə əminsiniz?",
+    "deleteWarning": "Bu əməliyyat geri alına bilməz.",
+    "savedSuccessfully": "Uğurla yadda saxlanıldı",
+    "deletedSuccessfully": "Uğurla silindi",
+    "copiedToClipboard": "Buferə kopyalandı"
+  },
+  "pagination": {
+    "page": "Səhifə",
+    "of": "-dən",
+    "items": "element",
+    "showing": "Göstərilir",
+    "first": "Birinci",
+    "last": "Sonuncu",
+    "next": "Növbəti",
+    "previous": "Əvvəlki",
+    "rowsPerPage": "Səhifədə sətir"
+  },
+  "table": {
+    "noData": "Məlumat yoxdur",
+    "loading": "Yüklənir...",
+    "actions": "Əməliyyatlar",
+    "selectAll": "Hamısını seç"
+  },
+  "form": {
+    "required": "Bu sahə məcburidir",
+    "optional": "İstəyə bağlı",
+    "invalidEmail": "Yanlış e-poçt formatı",
+    "passwordTooShort": "Şifrə ən azı 8 simvol olmalıdır",
+    "passwordMismatch": "Şifrələr uyğun gəlmir"
+  },
+  "footer": {
+    "copyright": "© {year} Qiyas. Bütün hüquqlar qorunur.",
+    "privacy": "Gizlilik Siyasəti",
+    "terms": "İstifadə Şərtləri"
+  }
+}
