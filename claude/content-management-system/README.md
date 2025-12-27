@@ -1,5 +1,23 @@
 # Qiyas CMS
 
+## 🔐 Security Notice
+
+**CRITICAL**: This project has been updated to address **CVE-2025-55182** (CVSS 10.0) - a critical remote code execution vulnerability in React Server Components.
+
+**Patched versions used:**
+- `next@15.1.11` ✅
+- `react@19.0.1` ✅  
+- `react-dom@19.0.1` ✅
+
+If you're upgrading from an older version, run:
+```bash
+pnpm update next react react-dom
+```
+
+See: https://react.dev/blog/2025/12/03/critical-security-vulnerability-in-react-server-components
+
+---
+
 Enterprise-grade, multi-language Content Management System built with Next.js 15, optimized for minimal operational costs on VDS deployment.
 
 ## 🚀 Features

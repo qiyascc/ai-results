@@ -39,6 +39,32 @@ REPO_URL="https://github.com/YOUR_USERNAME/qiyas.git"
 BRANCH="main"
 NODE_VERSION="20"
 
+# Security check function for CVE-2025-55182
+check_security_versions() {
+    log "🔐 Running security version check (CVE-2025-55182)..."
+    
+    if [ -f "$APP_DIR/package.json" ]; then
+        local next_ver=$(grep -oP '"next":\s*"\K[^"]+' "$APP_DIR/package.json" 2>/dev/null || echo "unknown")
+        local react_ver=$(grep -oP '"react":\s*"\K[^"]+' "$APP_DIR/package.json" 2>/dev/null || echo "unknown")
+        
+        info "Next.js: $next_ver, React: $react_ver"
+        
+        # CVE-2025-55182 affected Next.js versions (15.1.0 - 15.1.10)
+        if [[ "$next_ver" =~ ^15\.1\.([0-9]|10)$ ]]; then
+            warn "⚠️  Next.js $next_ver is VULNERABLE! Update to 15.1.11+"
+        else
+            log "✅ Next.js version appears safe"
+        fi
+        
+        # CVE-2025-55182 affected React version (19.0.0)
+        if [[ "$react_ver" == "19.0.0" ]]; then
+            warn "⚠️  React $react_ver is VULNERABLE! Update to 19.0.1+"
+        else
+            log "✅ React version appears safe"
+        fi
+    fi
+}
+
 # Check if running as root
 if [ "$EUID" -ne 0 ]; then
     error "Please run as root: sudo $0 $DOMAIN $EMAIL"
